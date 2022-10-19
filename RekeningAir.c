@@ -11,6 +11,13 @@
 #define BPM_R               //biaya pemeliharaan meter rumah tangga Rp.10
 #define BPM_U               //biaya pemeliharaan meter usaha Rp.20
 
+char namaPelanggan[30],
+     kategori[25],
+     golongan[3],
+     alamat[100];
+int  pBulanLalu,
+     pBulanIni;
+
 int main()
 {
     menu();
@@ -31,6 +38,7 @@ void menu()
     printf("\t\t|| [1] Masuk sebagai Pelanggan Rumah Tangga                             ||\n");
     printf("\t\t|| [2] Masuk sebagai Pelanggan Usaha                                    ||\n");
     printf("\t\t|| [3] Instruksi Penggunaan                                             ||\n");
+    printf("\t\t|| [4] Kredit Program                                                   ||\n");
     printf("\t\t|| [0] Keluar                                                           ||\n");
     printf("\t\t||______________________________________________________________________||\n");
     printf("\n\t\tPilih menu yang diinginkan: ");
@@ -49,6 +57,10 @@ void menu()
                 system("cls");
 
                 break;
+            case 4:
+                system("cls");
+
+                break;
             case 0:
                 keluar();
                 break;
@@ -56,6 +68,7 @@ void menu()
                 printf("\n\t\tPilihan Anda salah. Silahkan coba lagi (dimulai dalam 2 detik).");
                 inputSalah();
                 menu();
+                break;
          }
     } else {
         inputSalah();
@@ -159,16 +172,16 @@ void masukRT()
 
                 break;
             case 0:
-                menu();
+                masukRT();
                 break;
             default:
                 printf("\n\t\tPilihan Anda salah. Silahkan coba lagi (dimulai dalam 2 detik).");
                 inputSalah();
-                menu();
+                masukRT();
          }
     } else {
         inputSalah();
-        menu();}
+        masukRT();}
  }
 
 
@@ -237,12 +250,61 @@ void masukU()
             default:
                 printf("\n\t\tPilihan Anda salah. Silahkan coba lagi (dimulai dalam 2 detik).");
                 inputSalah();
-                menu();
+                masukU();
          }
     } else {
         inputSalah();
-        menu();}
+        masukU();}
  }
+
+
+void inputPemakaian()
+{
+    printf("\t\t  ______________________________________________________________________\n");
+    printf("\t\t                                                                        \n");
+    printf("\t\t   Nama     : %s                                                        \n", namaPelanggan);
+    printf("\t\t   Alamat   : %s                                                        \n", alamat);
+    printf("\t\t   Kategori : %s                                                        \n\n", kategori);
+    printf("\t\t   Golongan : %s                                                        \n\n", golongan);
+    printf("\t\t   Mohon masukkan besar pemakaian air Anda di bawah ini.                \n");
+    printf("\t\t  ______________________________________________________________________\n");
+    printf("\t\t  Besar Pemakaian Air Bulan Lalu (dalam m3) :  ");
+    if(getInt(&pBulanLalu))
+    {
+        printf("\t\t  Besar Pemakaian Air Bulan Ini (dalam m3) :  ");
+        if(getInt(&pBulanIni))
+           {
+            printf("Total pemakaian: %d", biayaPemakaian(pBulanLalu, pBulanIni));
+            repeat();
+           }
+           else
+           {
+            printf("Masukkan Anda salah. Silahkan coba lagi.");
+            inputSalah();
+            inputPemakaian();
+           }
+    }
+    else
+    {
+        printf("Masukkan Anda salah. Silahkan coba lagi.");
+        inputSalah();
+        inputPemakaian();
+    }
+}
+
+
+char namaPelanggan[30],
+     kategori[25],
+     alamat[100];
+int  pBulanLalu,
+     pBulanIni;
+
+
+int biayaPemakaian(int bulanLalu, int bulanIni)
+{
+    return(bulanLalu + bulanIni); //masih nyoba2
+}
+
 
 
 void repeat()
