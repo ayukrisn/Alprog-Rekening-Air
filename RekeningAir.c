@@ -275,63 +275,12 @@ void d1()
             default:
                 printf("\n\t\tPilihan Anda salah. Silahkan coba lagi (dimulai dalam 2 detik).");
                 inputSalah();
-                regisRT();
+                d1();
                 break;
          }
     } else {
         inputSalah();
-        regisRT();}
- }
-
-
- void d11()
-{
-    int pilihanMenu = 0;
-    printf("\t\t  ______________________________________________________________________\n");
-    printf("\t\t||                                                                      ||\n");
-    printf("\t\t||                  M E N U  R E G I S T R A S I : R T                  ||\n");
-    printf("\t\t||                Mohon Masukkan Daya Listrik Rumah Anda                ||\n");
-    printf("\t\t||                                                                      ||\n");
-    printf("\t\t|| -------------------------------------------------------------------- ||\n");
-    printf("\t\t|| [1] Daya listrik 450 VA                                              ||\n");
-    printf("\t\t|| [2] Daya listrik 900 VA                                              ||\n");
-    printf("\t\t|| [3] Daya listrik 1.300 VA                                            ||\n");
-    printf("\t\t|| [2] Daya listrik > 1.300 VA                                          ||\n");
-    printf("\t\t|| [0] Kembali ke menu utama                                            ||\n");
-    printf("\t\t||______________________________________________________________________||\n");
-    printf("\n\t\t Pilih daya listrik : ");
-    if (getInt(&pilihanMenu)){
-         switch (pilihanMenu)
-         {
-            case 1:
-                system("cls");
-                d11();
-                break;
-            case 2:
-                system("cls");
-                //
-                break;
-            case 3:
-                system("cls");
-                //
-                break;
-            case 4:
-                system("cls");
-
-                break;
-            case 0:
-                system("cls");
-                menu();
-                break;
-            default:
-                printf("\n\t\tPilihan Anda salah. Silahkan coba lagi (dimulai dalam 2 detik).");
-                inputSalah();
-                regisRT();
-                break;
-         }
-    } else {
-        inputSalah();
-        regisRT();}
+        d1();}
  }
 
 
