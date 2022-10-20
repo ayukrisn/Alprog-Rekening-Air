@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include<windows.h>
+#include <windows.h>
 #include <math.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -8,8 +8,8 @@
 #define biayaAdmin          //Biaya administrasi Rp50
 #define denda10Sampai100    //Denda pemakaian 10 sampai 100 m3 Rp10
 #define dendaLebihDari100   //Denda pemakaian melebihi 100 m3 Rp20
-#define BPM_R               //biaya pemeliharaan meter rumah tangga Rp.10
-#define BPM_U               //biaya pemeliharaan meter usaha Rp.20
+#define BPM_R               //Biaya pemeliharaan meter rumah tangga Rp10
+#define BPM_U               //Biaya pemeliharaan meter usaha Rp20
 
 char namaPelanggan[30],
      kategori[25],
@@ -73,10 +73,6 @@ void menu()
         inputSalah();
         menu();}
  }
-#include <stdio.h>
-#include <string.h>
-
-
 
 int main(void) 
 {
