@@ -73,6 +73,35 @@ void menu()
         inputSalah();
         menu();}
  }
+#include <stdio.h>
+#include <string.h>
+
+
+
+int main(void) 
+{
+	int kelompok_pelanggan;
+	printf("-------------------------------------------------------------------\n");
+  	printf("                         SELAMAT DATANG         	          	   \n");
+  	printf("-------------------------------------------------------------------\n");
+	printf(" _________________________________________________________________ \n");	
+	printf("| _______________________________________________________________ |\n");
+	printf("||                     TAGIHAN AIR MINUM                         ||\n");										
+	printf("||.............................................................. ||\n");					
+	printf("|| Silahkan Pilih Kelompok Pelanggan Dibawah Ini Terlebih Dahulu ||\n");								
+	printf("||_______________________________________________________________||\n");		
+	printf("|| 1.Non Niaga Bersubsidi  							 ||\n");															
+	printf("|| 2.Non Niaga Tanpa Bersubsidi                                  ||\n");															
+	printf("|| 3.Niaga									 ||\n");	
+	printf("||_______________________________________________________________||\n");	
+	printf("|_________________________________________________________________|\n");
+	printf("Kelompok Pelanggan : ");
+	scanf("%d, &kelompok_pelanggan");
+	
+	
+	printf("Masukkan Jenis Golongan Anda : ");
+
+
 
 void kelompokPelanggan()
 {
