@@ -12,9 +12,8 @@
 #define BPM_U               //biaya pemeliharaan meter usaha Rp.20
 
 void menu(),
-     registrasi1(), regisKelompok(), regisRT(),
-     d1(),
-     d11();
+     registrasi1(), regisKelompok(), regisRT(), regisUsaha(),
+     d1(), d2(), d3(), d4(), d5();
 
 char nama[255],
      alamat[100],
@@ -82,6 +81,7 @@ void menu()
         inputSalah();
         menu();}
  }
+
 
 void registrasi1()
 {
@@ -155,7 +155,7 @@ void regisKelompok()
                 break;
             case 2:
                 system("cls");
-                //
+                regisUsaha();
                 break;
             case 3:
                 system("cls");
@@ -179,6 +179,7 @@ void regisKelompok()
         inputSalah();
         regisKelompok();}
  }
+
 
 void regisRT()
 {
@@ -207,16 +208,19 @@ void regisRT()
                 break;
             case 2:
                 system("cls");
-                //
+                d2();
                 break;
             case 3:
                 system("cls");
-                //
+                d3();
                 break;
             case 4:
                 system("cls");
-
+                d4();
                 break;
+            case 5:
+                system("cls");
+                d5();
             case 0:
                 system("cls");
                 menu();
@@ -233,6 +237,53 @@ void regisRT()
  }
 
 
+void regisUsaha()
+{
+    int pilihanMenu = 0;
+    printf("\t\t  ______________________________________________________________________\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||               M E N U  R E G I S T R A S I : U S A H A               ||\n");
+    printf("\t\t||              Mohon Masukkan Lebar Jalan Muka Usaha Anda              ||\n");
+    printf("\t\t||                   (Termasuk saluran got dan berm)                    ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t|| [1] 0-6,99 meter                                                     ||\n");
+    printf("\t\t|| [2] 7-10 meter                                                       ||\n");
+    printf("\t\t|| [3] >10 meter                                                        ||\n");
+    printf("\t\t|| [0] Kembali ke menu utama                                            ||\n");
+    printf("\t\t||______________________________________________________________________||\n");
+    printf("\n\t\t Pilih lebar jalan : ");
+    if (getInt(&pilihanMenu)){
+         switch (pilihanMenu)
+         {
+            case 1:
+                system("cls");
+                e1();
+                break;
+            case 2:
+                system("cls");
+                e2();
+                break;
+            case 3:
+                system("cls");
+                e3();
+                break;
+            case 0:
+                system("cls");
+                menu();
+                break;
+            default:
+                printf("\n\t\tPilihan Anda salah. Silahkan coba lagi (dimulai dalam 2 detik).");
+                inputSalah();
+                regisUsaha();
+                break;
+         }
+    } else {
+        inputSalah();
+        regisUsaha();}
+ }
+
+
 void d1()
 {
     int pilihanMenu = 0;
@@ -245,8 +296,8 @@ void d1()
     printf("\t\t|| [1] Daya listrik 450 VA                                              ||\n");
     printf("\t\t|| [2] Daya listrik 900 VA                                              ||\n");
     printf("\t\t|| [3] Daya listrik 1.300 VA                                            ||\n");
-    printf("\t\t|| [2] Daya listrik > 1.300 VA                                           ||\n");
-    printf("\t\t|| [0] Kembali ke menu utama                                            ||\n");
+    printf("\t\t|| [4] Daya listrik > 1.300 VA                                          ||\n");
+    printf("\t\t|| [0] Kembali ke menu sebelumnya                                       ||\n");
     printf("\t\t||______________________________________________________________________||\n");
     printf("\n\t\t Pilih daya listrik : ");
     if (getInt(&pilihanMenu)){
@@ -254,7 +305,7 @@ void d1()
          {
             case 1:
                 system("cls");
-                d11();
+                //
                 break;
             case 2:
                 system("cls");
@@ -270,7 +321,7 @@ void d1()
                 break;
             case 0:
                 system("cls");
-                menu();
+                regisRT();
                 break;
             default:
                 printf("\n\t\tPilihan Anda salah. Silahkan coba lagi (dimulai dalam 2 detik).");
@@ -281,6 +332,363 @@ void d1()
     } else {
         inputSalah();
         d1();}
+ }
+
+
+void d2()
+{
+    int pilihanMenu = 0;
+    printf("\t\t  ______________________________________________________________________\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                  M E N U  R E G I S T R A S I : R T                  ||\n");
+    printf("\t\t||                Mohon Masukkan Daya Listrik Rumah Anda                ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t|| [1] Daya listrik 450 VA                                              ||\n");
+    printf("\t\t|| [2] Daya listrik 900 VA                                              ||\n");
+    printf("\t\t|| [3] Daya listrik 1.300 VA                                            ||\n");
+    printf("\t\t|| [4] Daya listrik > 1.300 VA                                          ||\n");
+    printf("\t\t|| [0] Kembali ke menu sebelumnya                                       ||\n");
+    printf("\t\t||______________________________________________________________________||\n");
+    printf("\n\t\t Pilih daya listrik : ");
+    if (getInt(&pilihanMenu)){
+         switch (pilihanMenu)
+         {
+            case 1:
+                system("cls");
+                //
+                break;
+            case 2:
+                system("cls");
+                //
+                break;
+            case 3:
+                system("cls");
+                //
+                break;
+            case 4:
+                system("cls");
+
+                break;
+            case 0:
+                system("cls");
+                regisRT();
+                break;
+            default:
+                printf("\n\t\tPilihan Anda salah. Silahkan coba lagi (dimulai dalam 2 detik).");
+                inputSalah();
+                d2();
+                break;
+         }
+    } else {
+        inputSalah();
+        d2();}
+ }
+
+
+void d3()
+{
+    int pilihanMenu = 0;
+    printf("\t\t  ______________________________________________________________________\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                  M E N U  R E G I S T R A S I : R T                  ||\n");
+    printf("\t\t||                Mohon Masukkan Daya Listrik Rumah Anda                ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t|| [1] Daya listrik 450 VA                                              ||\n");
+    printf("\t\t|| [2] Daya listrik 900 VA                                              ||\n");
+    printf("\t\t|| [3] Daya listrik 1.300 VA                                            ||\n");
+    printf("\t\t|| [4] Daya listrik > 1.300 VA                                          ||\n");
+    printf("\t\t|| [0] Kembali ke menu sebelumnya                                       ||\n");
+    printf("\t\t||______________________________________________________________________||\n");
+    printf("\n\t\t Pilih daya listrik : ");
+    if (getInt(&pilihanMenu)){
+         switch (pilihanMenu)
+         {
+            case 1:
+                system("cls");
+                //
+                break;
+            case 2:
+                system("cls");
+                //
+                break;
+            case 3:
+                system("cls");
+                //
+                break;
+            case 4:
+                system("cls");
+
+                break;
+            case 0:
+                system("cls");
+                regisRT();
+                break;
+            default:
+                printf("\n\t\tPilihan Anda salah. Silahkan coba lagi (dimulai dalam 2 detik).");
+                inputSalah();
+                d3();
+                break;
+         }
+    } else {
+        inputSalah();
+        d3();}
+ }
+
+
+void d4()
+{
+    int pilihanMenu = 0;
+    printf("\t\t  ______________________________________________________________________\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                  M E N U  R E G I S T R A S I : R T                  ||\n");
+    printf("\t\t||                Mohon Masukkan Daya Listrik Rumah Anda                ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t|| [1] Daya listrik 450 VA                                              ||\n");
+    printf("\t\t|| [2] Daya listrik 900 VA                                              ||\n");
+    printf("\t\t|| [3] Daya listrik 1.300 VA                                            ||\n");
+    printf("\t\t|| [4] Daya listrik > 1.300 VA                                          ||\n");
+    printf("\t\t|| [0] Kembali ke menu sebelumnya                                       ||\n");
+    printf("\t\t||______________________________________________________________________||\n");
+    printf("\n\t\t Pilih daya listrik : ");
+    if (getInt(&pilihanMenu)){
+         switch (pilihanMenu)
+         {
+            case 1:
+                system("cls");
+                //
+                break;
+            case 2:
+                system("cls");
+                //
+                break;
+            case 3:
+                system("cls");
+                //
+                break;
+            case 4:
+                system("cls");
+
+                break;
+            case 0:
+                system("cls");
+                regisRT();
+                break;
+            default:
+                printf("\n\t\tPilihan Anda salah. Silahkan coba lagi (dimulai dalam 2 detik).");
+                inputSalah();
+                d4();
+                break;
+         }
+    } else {
+        inputSalah();
+        d4();}
+ }
+
+
+void d5()
+{
+    int pilihanMenu = 0;
+    printf("\t\t  ______________________________________________________________________\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                  M E N U  R E G I S T R A S I : R T                  ||\n");
+    printf("\t\t||                Mohon Masukkan Daya Listrik Rumah Anda                ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t|| [1] Daya listrik 450 VA                                              ||\n");
+    printf("\t\t|| [2] Daya listrik 900 VA                                              ||\n");
+    printf("\t\t|| [3] Daya listrik 1.300 VA                                            ||\n");
+    printf("\t\t|| [4] Daya listrik > 1.300 VA                                          ||\n");
+    printf("\t\t|| [0] Kembali ke menu sebelumnya                                       ||\n");
+    printf("\t\t||______________________________________________________________________||\n");
+    printf("\n\t\t Pilih daya listrik : ");
+    if (getInt(&pilihanMenu)){
+         switch (pilihanMenu)
+         {
+            case 1:
+                system("cls");
+                //
+                break;
+            case 2:
+                system("cls");
+                //
+                break;
+            case 3:
+                system("cls");
+                //
+                break;
+            case 4:
+                system("cls");
+
+                break;
+            case 0:
+                system("cls");
+                regisRT();
+                break;
+            default:
+                printf("\n\t\tPilihan Anda salah. Silahkan coba lagi (dimulai dalam 2 detik).");
+                inputSalah();
+                d5();
+                break;
+         }
+    } else {
+        inputSalah();
+        d5();}
+ }
+
+
+void e1()
+{
+    int pilihanMenu = 0;
+    printf("\t\t  ______________________________________________________________________\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||               M E N U  R E G I S T R A S I : U S A H A               ||\n");
+    printf("\t\t||                Mohon Masukkan Daya Listrik Usaha Anda                ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t|| [1] Daya listrik 450 VA                                              ||\n");
+    printf("\t\t|| [2] Daya listrik 900 VA                                              ||\n");
+    printf("\t\t|| [3] Daya listrik 1.300 VA                                            ||\n");
+    printf("\t\t|| [4] Daya listrik > 1.300 VA                                          ||\n");
+    printf("\t\t|| [0] Kembali ke menu sebelumnya                                       ||\n");
+    printf("\t\t||______________________________________________________________________||\n");
+    printf("\n\t\t Pilih daya listrik : ");
+    if (getInt(&pilihanMenu)){
+         switch (pilihanMenu)
+         {
+            case 1:
+                system("cls");
+                //
+                break;
+            case 2:
+                system("cls");
+                //
+                break;
+            case 3:
+                system("cls");
+                //
+                break;
+            case 4:
+                system("cls");
+
+                break;
+            case 0:
+                system("cls");
+                regisUsaha();
+                break;
+            default:
+                printf("\n\t\tPilihan Anda salah. Silahkan coba lagi (dimulai dalam 2 detik).");
+                inputSalah();
+                e1();
+                break;
+         }
+    } else {
+        inputSalah();
+        e1();}
+ }
+
+
+void e2()
+{
+    int pilihanMenu = 0;
+    printf("\t\t  ______________________________________________________________________\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||               M E N U  R E G I S T R A S I : U S A H A               ||\n");
+    printf("\t\t||                Mohon Masukkan Daya Listrik Usaha Anda                ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t|| [1] Daya listrik 450 VA                                              ||\n");
+    printf("\t\t|| [2] Daya listrik 900 VA                                              ||\n");
+    printf("\t\t|| [3] Daya listrik 1.300 VA                                            ||\n");
+    printf("\t\t|| [4] Daya listrik > 1.300 VA                                          ||\n");
+    printf("\t\t|| [0] Kembali ke menu sebelumnya                                       ||\n");
+    printf("\t\t||______________________________________________________________________||\n");
+    printf("\n\t\t Pilih daya listrik : ");
+    if (getInt(&pilihanMenu)){
+         switch (pilihanMenu)
+         {
+            case 1:
+                system("cls");
+                //
+                break;
+            case 2:
+                system("cls");
+                //
+                break;
+            case 3:
+                system("cls");
+                //
+                break;
+            case 4:
+                system("cls");
+
+                break;
+            case 0:
+                system("cls");
+                regisUsaha();
+                break;
+            default:
+                printf("\n\t\tPilihan Anda salah. Silahkan coba lagi (dimulai dalam 2 detik).");
+                inputSalah();
+                e2();
+                break;
+         }
+    } else {
+        inputSalah();
+        e2();}
+ }
+
+
+void e3()
+{
+    int pilihanMenu = 0;
+    printf("\t\t  ______________________________________________________________________\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||               M E N U  R E G I S T R A S I : U S A H A               ||\n");
+    printf("\t\t||                Mohon Masukkan Daya Listrik Usaha Anda                ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t|| [1] Daya listrik 450 VA                                              ||\n");
+    printf("\t\t|| [2] Daya listrik 900 VA                                              ||\n");
+    printf("\t\t|| [3] Daya listrik 1.300 VA                                            ||\n");
+    printf("\t\t|| [4] Daya listrik > 1.300 VA                                          ||\n");
+    printf("\t\t|| [0] Kembali ke menu sebelumnya                                       ||\n");
+    printf("\t\t||______________________________________________________________________||\n");
+    printf("\n\t\t Pilih daya listrik : ");
+    if (getInt(&pilihanMenu)){
+         switch (pilihanMenu)
+         {
+            case 1:
+                system("cls");
+                //
+                break;
+            case 2:
+                system("cls");
+                //
+                break;
+            case 3:
+                system("cls");
+                //
+                break;
+            case 4:
+                system("cls");
+
+                break;
+            case 0:
+                system("cls");
+                regisUsaha();
+                break;
+            default:
+                printf("\n\t\tPilihan Anda salah. Silahkan coba lagi (dimulai dalam 2 detik).");
+                inputSalah();
+                e3();
+                break;
+         }
+    } else {
+        inputSalah();
+        e3();}
  }
 
 
@@ -359,3 +767,4 @@ void flushIn()
     int ch = 0;
     while ((ch = getchar()) != '\n' && ch != -1);
 }
+
