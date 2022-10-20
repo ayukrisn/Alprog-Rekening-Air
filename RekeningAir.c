@@ -8,15 +8,24 @@
 #define biayaAdmin          //Biaya administrasi Rp50
 #define denda10Sampai100    //Denda pemakaian 10 sampai 100 m3 Rp10
 #define dendaLebihDari100   //Denda pemakaian melebihi 100 m3 Rp20
-#define BPM_R               //Biaya pemeliharaan meter rumah tangga Rp10
-#define BPM_U               //Biaya pemeliharaan meter usaha Rp20
+#define BPM_R               //biaya pemeliharaan meter rumah tangga Rp.10
+#define BPM_U               //biaya pemeliharaan meter usaha Rp.20
 
-char namaPelanggan[30],
-     kategori[25],
-     golongan[3],
-     alamat[100];
+void menu(),
+     registrasi1(), regisKelompok(), regisRT(),
+     d1(),
+     d11();
+
+char nama[255],
+     alamat[100],
+     golongan[10];
+
 int  pBulanLalu,
-     pBulanIni;
+     pBulanIni,
+     pTotal;
+
+bool getInt(int*target), getChar(char*target);
+
 
 int main()
 {
@@ -28,15 +37,15 @@ int main()
 void menu()
  {
     int pilihanMenu = 0;
-    printf("\t\t  ______________________________________________________________________\n");
+    printf("\t\t  ______________________________________________________________________ \n");
     printf("\t\t||______________________________________________________________________||\n");
     printf("\t\t||                                                                      ||\n");
     printf("\t\t||                       P E M B A Y A R A N  A I R                     ||\n");
-    printf("\t\t||          A I R  M I N U M  T I R T A  S E W A K A D A R M A          ||\n");
+    printf("\t\t||                   PERUMDA AIR MINUM TIRTA SEWAKADARMA                ||\n");
     printf("\t\t||                                                                      ||\n");
-    printf("\t\t|| -------------------------------------------------------------------- ||\n");
-    printf("\t\t|| [1] Hitung Biaya Tagihan Air                                         ||\n");
-    printf("\t\t|| [2] Instruksi Penggunaan                                             ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t|| [1] Instruksi Penggunaan                                             ||\n");
+    printf("\t\t|| [2] Registrasi Pelanggan                                             ||\n");
     printf("\t\t|| [3] Kredit Program                                                   ||\n");
     printf("\t\t|| [0] Keluar                                                           ||\n");
     printf("\t\t||______________________________________________________________________||\n");
@@ -46,15 +55,15 @@ void menu()
          {
             case 1:
                 system("cls");
-                masukRT();
+                //
                 break;
             case 2:
                 system("cls");
-                masukU();
+                registrasi1();
                 break;
             case 3:
                 system("cls");
-
+                //
                 break;
             case 4:
                 system("cls");
@@ -74,100 +83,257 @@ void menu()
         menu();}
  }
 
-int main(void) 
+void registrasi1()
 {
-	int kelompok_pelanggan;
-	printf("-------------------------------------------------------------------\n");
-  	printf("                         SELAMAT DATANG         	          	   \n");
-  	printf("-------------------------------------------------------------------\n");
-	printf(" _________________________________________________________________ \n");	
-	printf("| _______________________________________________________________ |\n");
-	printf("||                     TAGIHAN AIR MINUM                         ||\n");										
-	printf("||.............................................................. ||\n");					
-	printf("|| Silahkan Pilih Kelompok Pelanggan Dibawah Ini Terlebih Dahulu ||\n");								
-	printf("||_______________________________________________________________||\n");		
-	printf("|| 1.Non Niaga Bersubsidi  							 ||\n");															
-	printf("|| 2.Non Niaga Tanpa Bersubsidi                                  ||\n");															
-	printf("|| 3.Niaga									 ||\n");	
-	printf("||_______________________________________________________________||\n");	
-	printf("|_________________________________________________________________|\n");
-	printf("Kelompok Pelanggan : ");
-	scanf("%d, &kelompok_pelanggan");
-	
-	
-	printf("Masukkan Jenis Golongan Anda : ");
-
-
-
-void kelompokPelanggan()
-{
-     //isi di sini
-     
-}
-
-void inputPemakaian()
-{
+    int navigasi = 0;
     printf("\t\t  ______________________________________________________________________\n");
-    printf("\t\t                                                                        \n");
-    printf("\t\t   Nama     : %s                                                        \n", namaPelanggan);
-    printf("\t\t   Alamat   : %s                                                        \n", alamat);
-    printf("\t\t   Kategori : %s                                                        \n\n", kategori);
-    printf("\t\t   Golongan : %s                                                        \n\n", golongan);
-    printf("\t\t   Mohon masukkan besar pemakaian air Anda di bawah ini.                \n");
+    printf("\t\t||______________________________________________________________________||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                    M E N U  R E G I S T R A S I                      ||\n");
+    printf("\t\t||                Mohon Masukkan Nama dan Alamat Anda                   ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||______________________________________________________________________||\n");
+
+    printf("\t\t  Nama Pelanggan: ");
+    scanf ("%[^\n]%*c", nama);
+    printf("\t\t  Alamat        : ");
+    scanf ("%[^\n]%*c", alamat);
+
     printf("\t\t  ______________________________________________________________________\n");
-    printf("\t\t  Besar Pemakaian Air Bulan Lalu (dalam m3) :  ");
-    if(getInt(&pBulanLalu))
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| Klik [1] untuk melanjutkan ke registrasi berikutnya.                 ||\n");
+    printf("\t\t|| Klik [0] untuk kembali ke menu awal.                                 ||\n");
+    printf("\t\t||______________________________________________________________________||\n");
+    printf("\t\t  Pilihan  : ");
+    if(getInt(&navigasi))
     {
-        printf("\t\t  Besar Pemakaian Air Bulan Ini (dalam m3) :  ");
-        if(getInt(&pBulanIni))
-           {
-            printf("Total pemakaian: %d", biayaPemakaian(pBulanLalu, pBulanIni));
-            repeat();
-           }
-           else
-           {
-            printf("Masukkan Anda salah. Silahkan coba lagi.");
-            inputSalah();
-            inputPemakaian();
-           }
+        if(navigasi == 1)
+        {
+            system("cls");
+            regisKelompok();
+        }
+        else if (navigasi == 0)
+        {
+            system("cls");
+            menu();
+        } else
+        {
+            printf("Masukkan Anda salah. Mohon coba lagi.");
+            registrasi1();
+        }
+
     }
     else
     {
-        printf("Masukkan Anda salah. Silahkan coba lagi.");
         inputSalah();
-        inputPemakaian();
+        registrasi1();
     }
+
 }
 
 
-int biayaPemakaian(int bulanLalu, int bulanIni)
+void regisKelompok()
 {
-    return(bulanLalu + bulanIni); //masih nyoba2
-}
+    int pilihanMenu = 0;
+    printf("\t\t  ______________________________________________________________________\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      M E N U  R E G I S T R A S I                    ||\n");
+    printf("\t\t||            Mohon Masukkan Tipe Kelompok Fasilitas Air Anda           ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t|| [1] Penggunaan untuk rumah tangga (RT)                               ||\n");
+    printf("\t\t|| [2] Penggunaan untuk usaha/niaga                                     ||\n");
+    printf("\t\t|| [0] Kembali ke menu utama                                            ||\n");
+    printf("\t\t||______________________________________________________________________||\n");
+    printf("\n\t\t Pilih tipe kelompok fasilitas : ");
+    if (getInt(&pilihanMenu)){
+         switch (pilihanMenu)
+         {
+            case 1:
+                system("cls");
+                regisRT();
+                break;
+            case 2:
+                system("cls");
+                //
+                break;
+            case 3:
+                system("cls");
+                //
+                break;
+            case 4:
+                system("cls");
 
+                break;
+            case 0:
+                system("cls");
+                menu();
+                break;
+            default:
+                printf("\n\t\tPilihan Anda salah. Silahkan coba lagi (dimulai dalam 2 detik).");
+                inputSalah();
+                regisKelompok();
+                break;
+         }
+    } else {
+        inputSalah();
+        regisKelompok();}
+ }
 
-
-void repeat()
+void regisRT()
 {
-    char pilihanUlang;
-    printf("\n\n\t\t Apakah Anda ingin kembali ke menu utama?");
-    printf("\n\t\t Ketik [Y] untuk 'Ya' dan [N] untuk 'Tidak'\n");
-    printf("\t\t Pilihan: ");
-    if (getChar(&pilihanUlang)){
-    if(pilihanUlang == 'Y' || pilihanUlang == 'y')
-    {
-        system("cls");
-        menu();
-    } else if(pilihanUlang == 'N' || pilihanUlang == 'n')
-        {
-            keluar();
-        } else
-            {
-                printf("\t\t Masukan Anda salah. Silahkan coba lagi.");
-                repeat();
-            }
-    } else { repeat();}
-}
+    int pilihanMenu = 0;
+    printf("\t\t  ______________________________________________________________________\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                  M E N U  R E G I S T R A S I : R T                  ||\n");
+    printf("\t\t||              Mohon Masukkan Lebar Jalan Muka Rumah Anda              ||\n");
+    printf("\t\t||                (Termasuk saluran got, berm, dan persil)              ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t|| [1] 0-3,99 meter                                                     ||\n");
+    printf("\t\t|| [2] 4-6,99 meter                                                     ||\n");
+    printf("\t\t|| [3] 7-10 meter                                                       ||\n");
+    printf("\t\t|| [4] >10 meter                                                        ||\n");
+    printf("\t\t|| [5] Memiliki usaha di samping tempat tinggal                         ||\n");
+    printf("\t\t|| [0] Kembali ke menu utama                                            ||\n");
+    printf("\t\t||______________________________________________________________________||\n");
+    printf("\n\t\t Pilih lebar jalan : ");
+    if (getInt(&pilihanMenu)){
+         switch (pilihanMenu)
+         {
+            case 1:
+                system("cls");
+                d1();
+                break;
+            case 2:
+                system("cls");
+                //
+                break;
+            case 3:
+                system("cls");
+                //
+                break;
+            case 4:
+                system("cls");
+
+                break;
+            case 0:
+                system("cls");
+                menu();
+                break;
+            default:
+                printf("\n\t\tPilihan Anda salah. Silahkan coba lagi (dimulai dalam 2 detik).");
+                inputSalah();
+                regisRT();
+                break;
+         }
+    } else {
+        inputSalah();
+        regisRT();}
+ }
+
+
+void d1()
+{
+    int pilihanMenu = 0;
+    printf("\t\t  ______________________________________________________________________\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                  M E N U  R E G I S T R A S I : R T                  ||\n");
+    printf("\t\t||                Mohon Masukkan Daya Listrik Rumah Anda                ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t|| [1] Daya listrik 450 VA                                              ||\n");
+    printf("\t\t|| [2] Daya listrik 900 VA                                              ||\n");
+    printf("\t\t|| [3] Daya listrik 1.300 VA                                            ||\n");
+    printf("\t\t|| [2] Daya listrik > 1.300 VA                                           ||\n");
+    printf("\t\t|| [0] Kembali ke menu utama                                            ||\n");
+    printf("\t\t||______________________________________________________________________||\n");
+    printf("\n\t\t Pilih daya listrik : ");
+    if (getInt(&pilihanMenu)){
+         switch (pilihanMenu)
+         {
+            case 1:
+                system("cls");
+                d11();
+                break;
+            case 2:
+                system("cls");
+                //
+                break;
+            case 3:
+                system("cls");
+                //
+                break;
+            case 4:
+                system("cls");
+
+                break;
+            case 0:
+                system("cls");
+                menu();
+                break;
+            default:
+                printf("\n\t\tPilihan Anda salah. Silahkan coba lagi (dimulai dalam 2 detik).");
+                inputSalah();
+                regisRT();
+                break;
+         }
+    } else {
+        inputSalah();
+        regisRT();}
+ }
+
+
+ void d11()
+{
+    int pilihanMenu = 0;
+    printf("\t\t  ______________________________________________________________________\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                  M E N U  R E G I S T R A S I : R T                  ||\n");
+    printf("\t\t||                Mohon Masukkan Daya Listrik Rumah Anda                ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t|| [1] Daya listrik 450 VA                                              ||\n");
+    printf("\t\t|| [2] Daya listrik 900 VA                                              ||\n");
+    printf("\t\t|| [3] Daya listrik 1.300 VA                                            ||\n");
+    printf("\t\t|| [2] Daya listrik > 1.300 VA                                          ||\n");
+    printf("\t\t|| [0] Kembali ke menu utama                                            ||\n");
+    printf("\t\t||______________________________________________________________________||\n");
+    printf("\n\t\t Pilih daya listrik : ");
+    if (getInt(&pilihanMenu)){
+         switch (pilihanMenu)
+         {
+            case 1:
+                system("cls");
+                d11();
+                break;
+            case 2:
+                system("cls");
+                //
+                break;
+            case 3:
+                system("cls");
+                //
+                break;
+            case 4:
+                system("cls");
+
+                break;
+            case 0:
+                system("cls");
+                menu();
+                break;
+            default:
+                printf("\n\t\tPilihan Anda salah. Silahkan coba lagi (dimulai dalam 2 detik).");
+                inputSalah();
+                regisRT();
+                break;
+         }
+    } else {
+        inputSalah();
+        regisRT();}
+ }
+
 
 void keluar()
 {
@@ -176,11 +342,34 @@ void keluar()
     printf("\t\t||______________________________________________________________________||\n");
     printf("\t\t||                                                                      ||\n");
     printf("\t\t||                       T E R I M A  K A S I H                         ||\n");
-    printf("\t\t||                Karena Telah Menggunakan Program Ini                  ||\n");
+    printf("\t\t||                    Sampai jumpa di lain waktu!                       ||\n");
     printf("\t\t||                                                                      ||\n");
     printf("\t\t||______________________________________________________________________||\n");
     printf("\t\t  ______________________________________________________________________  \n");
     exit(0);
+}
+
+
+void repeat()
+{
+    char pilihanUlang;
+    printf("\n\n\t\t Apakah Anda ingin kembali ke menu utama?");
+    printf("\n\t\t Ketik [Y] untuk 'Ya' dan [T] untuk 'Tidak'\n");
+    printf("\t\t Pilihan: ");
+    if (getChar(&pilihanUlang)){
+    if(pilihanUlang == 'Y' || pilihanUlang == 'y')
+    {
+        system("cls");
+        menu();
+    } else if(pilihanUlang == 'T' || pilihanUlang == 't')
+        {
+            keluar();
+        } else
+            {
+                printf("\t\t Masukan Anda salah. Silahkan coba lagi.");
+                repeat();
+            }
+    } else { repeat();}
 }
 
 
@@ -208,9 +397,16 @@ bool getChar(char*target)
 
 }
 
+
+void inputSalah()
+{
+    sleep(2);
+    system("cls");
+}
+
+
 void flushIn()
 {
     int ch = 0;
     while ((ch = getchar()) != '\n' && ch != -1);
 }
-
