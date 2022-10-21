@@ -533,6 +533,1433 @@ void d11()
 }
 
 
+void d12()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*2060;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*2340;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*5940;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaRT;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : D1-2 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
+
+
+void d21()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*2340;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*2620;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*6000;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaRT;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : D2-1 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
+
+
+void d22()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*2620;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*2900;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*6060;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaRT;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : D2-2 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
+
+
+void d31()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*2900;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*3180;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*6120;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaRT;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : D3-1 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
+
+
+
+void d32()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*3180;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*3460;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*6180;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaRT;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : D3-2 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
+
+
+void d41()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*3460;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*3740;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*6240;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaRT;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : D4-1 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
+
+
+void d42()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*3740;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*4020;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*6300;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaRT;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : D4-2 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
+
+
+void d13()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*6340;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*9200;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*9600;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaRT;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : D1-3 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
+
+
+void d14()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*6420;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*9350;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*9650;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaRT;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : D1-4 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
+
+
+void d23()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*6490;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*9500;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*9800;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaRT;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : D2-3 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
+
+
+void d24()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*6570;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*9650;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*9950;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaRT;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : D2-4 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
+
+
+void d33()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*6640;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*9800;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*10100;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaRT;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : D3-3 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
+
+
+void d34()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*6720;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*9950;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*10250;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaRT;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : D3-4 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
+
+
+void d43()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*6790;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*10100;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*10400;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaRT;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : D4-3 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
+
+
+void d44()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*6870;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*10250;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*10550;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaRT;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : D4-4 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
+
+
+void d51()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*6940;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*10400;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*10700;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaRT;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : D5-1 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
+
+
+void d52()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*7020;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*10550;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*10850;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaRT;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : D5-2 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
+
+
+void d53()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*7090;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*10700;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*11000;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaRT;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : D5-3 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
+
+
+void d54()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*7170;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*10850;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*11150;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaRT;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : D5-4 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
+
+
+void e11()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*9200;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*9850;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*10950;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaU;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : E1-1 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
+
+
+void e12()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*9500;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*10150;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*11250;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaU;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : E1-2 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
+
+
+void e13()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*9800;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*10450;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*11550;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaU;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : E1-3 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
+
+
+void e14()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*10100;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*10750;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*11850;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaU;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : E1-4 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
+
+
+void e21()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*10400;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*11050;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*12150;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaU;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : E2-1 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
+
+
+void e22()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*10700;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*11350;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*12550;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaU;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : E2-2 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
+
+
+void e23()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*11000;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*11650;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*13150;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaU;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : E2-3 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
+
+
+void e24()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*11300;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*11950;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*13950;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaU;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : E2-4 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
+
+
+void e31()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*11600;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*12250;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*14750;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaU;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : E3-1 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
+
+
+void e32()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*11900;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*12550;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*15050;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaU;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : E3-2 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
+
+
+void e33()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*12200;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*12850;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*15850;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaU;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : E3-3 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
+
+
+void e34()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*12500;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*13150;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*16650;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaU;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : E3-4 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
+
+
 void keluar()
 {
     system("cls");
