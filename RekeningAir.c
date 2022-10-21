@@ -515,7 +515,6 @@ void d11()
 
     printf("\t\t     Nama     : %s \n", nama);
     printf("\t\t     Alamat   : %s \n", alamat);
-    printf("\t\t     Golongan : D1-1 \n");
     printf("\t\t|| -------------------------------------------------------------------- ||\n");
     printf("\t\t                             [Daftar Biaya] \n" );
 
