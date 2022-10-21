@@ -15,15 +15,15 @@
 
 void menu(),
      registrasi1(), regisKelompok(), regisRTSubsidi(), regisRTNonSubsidi(), regisUsaha(),
-     inputPemakaian();
-     /*d11(), d12(), d13(), d14(),
+     inputPemakaian(),
+     d11(), d12(), d13(), d14(),
      d21(), d22(), d23(), d24(),
      d31(), d32(), d33(), d34(),
      d41(), d42(), d43(), d44(),
-     d51(), d52(), d53(), d54();*/
-     /*e11(), e12(), e13(), e14(),
+     d51(), d52(), d53(), d54(),
+     e11(), e12(), e13(), e14(),
      e21(), e22(), e23(), e24(),
-     e31(), e32(), e33(), e34(),*/
+     e31(), e32(), e33(), e34();
 
 char nama[255],
      alamat[255];
@@ -51,9 +51,8 @@ void menu()
     printf("\t\t||                   PERUMDA AIR MINUM TIRTA SEWAKADARMA                ||\n");
     printf("\t\t||                                                                      ||\n");
     printf("\t\t|| ==================================================================== ||\n");
-    printf("\t\t|| [1] Instruksi Penggunaan                                             ||\n");
-    printf("\t\t|| [2] Registrasi Pelanggan                                             ||\n");
-    printf("\t\t|| [3] Kredit Program                                                   ||\n");
+    printf("\t\t|| [1] Registrasi Pelanggan                                             ||\n");
+    printf("\t\t|| [2] Kredit Program                                                   ||\n");
     printf("\t\t|| [0] Keluar                                                           ||\n");
     printf("\t\t||______________________________________________________________________||\n");
     printf("\n\t\tPilih menu yang diinginkan: ");
@@ -62,19 +61,11 @@ void menu()
          {
             case 1:
                 system("cls");
-                //
+                registrasi1();
                 break;
             case 2:
                 system("cls");
-                registrasi1();
-                break;
-            case 3:
-                system("cls");
-                //
-                break;
-            case 4:
-                system("cls");
-
+                kredit();
                 break;
             case 0:
                 keluar();
@@ -1958,6 +1949,29 @@ void e34()
     repeat();
 
 }
+
+
+void kredit()
+{
+    printf("\t\t  ______________________________________________________________________\n");
+    printf("\t\t||______________________________________________________________________||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                              K R E D I T                             ||\n");
+    printf("\t\t||             PROGRAM PERHITUNGAN TARIF PEMBAYARAN AIR MINUM           ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t||                         Nama Anggota Kelompok                        ||\n");
+    printf("\t\t|| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  ||\n");
+    printf("\t\t|| > 2205551069 Ni Kadek Ari Diah Lestari                               ||\n");
+    printf("\t\t|| > 2205551072 I Gusti Ayu Krisna Kusuma Dewi                          ||\n");
+    printf("\t\t||______________________________________________________________________||\n");
+
+    system("pause");
+    system("cls");
+    menu();
+
+}
+
 
 
 void keluar()
