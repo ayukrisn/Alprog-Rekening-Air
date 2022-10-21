@@ -4,27 +4,32 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <memory.h>
+#include <time.h>
 
-#define biayaAdmin          //Biaya administrasi Rp50
-#define denda10Sampai100    //Denda pemakaian 10 sampai 100 m3 Rp10
-#define dendaLebihDari100   //Denda pemakaian melebihi 100 m3 Rp20
-#define BPM_R               //biaya pemeliharaan meter rumah tangga Rp.10
-#define BPM_U               //biaya pemeliharaan meter usaha Rp.20
+#define biayaAdmin          3000         //Biaya administrasi Rp3000
+#define dendaRT             8000         //Denda pemakaian 10 sampai 100 m3 Rp8000
+#define dendaUsaha          10000        //Denda pemakaian melebihi 100 m3 Rp10000
+#define BPM_R               5000         //biaya pemeliharaan meter rumah tangga Rp.5000
+#define BPM_U               5000         //biaya pemeliharaan meter usaha Rp.5000
+#define tempo               21           //tempo bayar
 
 void menu(),
-     registrasi1(), regisKelompok(), regisRTSubsidi(), regisRTNonSubsidi(), regisUsaha();
+     registrasi1(), regisKelompok(), regisRTSubsidi(), regisRTNonSubsidi(), regisUsaha(),
+     inputPemakaian();
      /*d11(), d12(), d13(), d14(),
      d21(), d22(), d23(), d24(),
      d31(), d32(), d33(), d34(),
      d41(), d42(), d43(), d44(),
      d51(), d52(), d53(), d54();*/
+     /*e11(), e12(), e13(), e14(),
+     e21(), e22(), e23(), e24(),
+     e31(), e32(), e33(), e34(),*/
 
 char nama[255],
      alamat[255];
 
-int  pBulanLalu,
-     pBulanIni,
-     pTotal;
+int  pBulanLalu, pBulanIni, totalPemakaian,
+     tarifPemakaian, denda, totalBiaya;
 
 bool getInt(int*target), getChar(char*target);
 
@@ -217,7 +222,7 @@ void regisRTSubsidi()
          {
             case 1:
                 system("cls");
-                //d11();
+                d11();
                 break;
             case 2:
                 system("cls");
@@ -446,6 +451,87 @@ int pilihanMenu = 0;
         inputSalah();
         regisUsaha();}
  }
+
+
+void inputPemakaian()
+{
+    printf("\t\t  ______________________________________________________________________\n");
+    printf("\t\t||______________________________________________________________________||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      INPUT PEMAKAIAN AIR MINUM                       ||\n");
+    printf("\t\t||            Mohon Masukkan Pemakaian Air Minum Anda (dalam m3)        ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||______________________________________________________________________||\n");
+    printf("\t\t  Mohon untuk memasukkan angka seperti contoh di bawah. \n");
+    printf("\t\t  Contoh: 1300 \n");
+    printf("\t\t  Pemakaian air minum bulan lalu : ");
+    if(getInt(&pBulanLalu)){
+        printf("\t\t  Pemakaian air minum bulan ini: ");
+        if(getInt(&pBulanIni))
+        {
+            printf("\n\t\t  Total pemakaian : %d m3.\n", totalPemakaian = pBulanIni - pBulanLalu);
+            printf("\t\t  Anda akan diarahkan pada total biaya dalam 5 detik lagi.");
+            sleep(5);
+            system("cls");
+        }
+        else
+        {
+            inputSalah();
+            inputPemakaian();
+        }
+   } else
+    {
+            inputSalah();
+            inputPemakaian();
+    }
+}
+
+
+void d11()
+{
+    inputPemakaian();
+    if (totalPemakaian <= 10) {
+        tarifPemakaian = totalPemakaian*1780;
+    } else if (11 <= totalPemakaian <= 20) {
+        tarifPemakaian = totalPemakaian*2060;
+    } else if ( totalPemakaian > 20) {
+        tarifPemakaian = totalPemakaian*5880;}
+
+    time_t t;
+    t = time(NULL);
+    struct tm tm = *localtime(&t);
+    if ((tm.tm_mday - tempo) <= 0) denda = 0;
+    else denda = dendaRT;
+
+    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+
+    printf("\t\t    __________________________________________________________________    \n");
+    printf("\t\t||======================================================================||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t||                      TOTAL PEMBAYARAN AIR MINUM                      ||\n");
+    printf("\t\t||                                                                      ||\n");
+    printf("\t\t|| ==================================================================== ||\n");
+    printf("\t\t                          [Identitas Pelanggan] \n");
+
+    printf("\t\t     Nama     : %s \n", nama);
+    printf("\t\t     Alamat   : %s \n", alamat);
+    printf("\t\t     Golongan : D1-1 \n");
+    printf("\t\t|| -------------------------------------------------------------------- ||\n");
+    printf("\t\t                             [Daftar Biaya] \n" );
+
+    printf("\t\t     Golongan           : D1-1 \n");
+    printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
+    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
+    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t   --------------------------------------------------------------------   \n");
+    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t||______________________________________________________________________||\n");
+    repeat();
+
+}
 
 
 void keluar()
