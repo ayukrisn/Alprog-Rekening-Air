@@ -226,28 +226,28 @@ void regisRTSubsidi()
                 break;
             case 2:
                 system("cls");
-                //d12();
+                d12();
                 break;
             case 3:
                 system("cls");
-                //d21();
+                d21();
                 break;
             case 4:
                 system("cls");
-                //d22();
+                d22();
                 break;
             case 5:
                 system("cls");
-                //d31();
+                d31();
             case 6:
                 system("cls");
-                //d32();
+                d32();
             case 7:
                 system("cls");
-                //d41();
+                d41();
             case 8:
                 system("cls");
-                //d42();
+                d42();
             case 0:
                 system("cls");
                 regisKelompok();
@@ -306,44 +306,44 @@ void regisRTNonSubsidi()
          {
             case 1:
                 system("cls");
-                //d13();
+                d13();
                 break;
             case 2:
                 system("cls");
-                //d14();
+                d14();
                 break;
             case 3:
                 system("cls");
-                //d23();
+                d23();
                 break;
             case 4:
                 system("cls");
-                //d24();
+                d24();
                 break;
             case 5:
                 system("cls");
-                //d33();
+                d33();
             case 6:
                 system("cls");
-                //d34();
+                d34();
             case 7:
                 system("cls");
-                //d43();
+                d43();
             case 8:
                 system("cls");
-                //d44();
+                d44();
             case 9:
                 system("cls");
-                //d51();
+                d51();
             case 10:
                 system("cls");
-                //d52();
+                d52();
             case 11:
                 system("cls");
-                //d53();
+                d53();
             case 12:
                 system("cls");
-                //d54();
+                d54();
             case 0:
                 system("cls");
                 regisKelompok();
@@ -399,44 +399,44 @@ int pilihanMenu = 0;
          {
             case 1:
                 system("cls");
-                //e11();
+                e11();
                 break;
             case 2:
                 system("cls");
-                //e12();
+                e12();
                 break;
             case 3:
                 system("cls");
-                //e13();
+                e13();
                 break;
             case 4:
                 system("cls");
-                //e14();
+                e14();
                 break;
             case 5:
                 system("cls");
-                //e21();
+                e21();
             case 6:
                 system("cls");
-                //e22();
+                e22();
             case 7:
                 system("cls");
-                //d23();
+                d23();
             case 8:
                 system("cls");
-                //d24();
+                d24();
             case 9:
                 system("cls");
-                //e31();
+                e31();
             case 10:
                 system("cls");
-                //e32();
+                e32();
             case 11:
                 system("cls");
-                //d33();
+                d33();
             case 12:
                 system("cls");
-                //d34();
+                d34();
             case 0:
                 system("cls");
                 regisKelompok();
@@ -1422,7 +1422,7 @@ void e11()
     t = time(NULL);
     struct tm tm = *localtime(&t);
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaU;
+    else denda = dendaUsaha;
 
     totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
 
@@ -1468,7 +1468,7 @@ void e12()
     t = time(NULL);
     struct tm tm = *localtime(&t);
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaU;
+    else denda = dendaUsaha;
 
     totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
 
@@ -1514,7 +1514,7 @@ void e13()
     t = time(NULL);
     struct tm tm = *localtime(&t);
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaU;
+    else denda = dendaUsaha;
 
     totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
 
@@ -1560,7 +1560,7 @@ void e14()
     t = time(NULL);
     struct tm tm = *localtime(&t);
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaU;
+    else denda = dendaUsaha;
 
     totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
 
@@ -1606,7 +1606,7 @@ void e21()
     t = time(NULL);
     struct tm tm = *localtime(&t);
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaU;
+    else denda = dendaUsaha;
 
     totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
 
@@ -1652,7 +1652,7 @@ void e22()
     t = time(NULL);
     struct tm tm = *localtime(&t);
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaU;
+    else denda = dendaUsaha;
 
     totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
 
@@ -1698,7 +1698,7 @@ void e23()
     t = time(NULL);
     struct tm tm = *localtime(&t);
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaU;
+    else denda = dendaUsaha;
 
     totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
 
@@ -1744,7 +1744,7 @@ void e24()
     t = time(NULL);
     struct tm tm = *localtime(&t);
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaU;
+    else denda = dendaUsaha;
 
     totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
 
@@ -1790,7 +1790,7 @@ void e31()
     t = time(NULL);
     struct tm tm = *localtime(&t);
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaU;
+    else denda = dendaUsaha;
 
     totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
 
@@ -1836,7 +1836,7 @@ void e32()
     t = time(NULL);
     struct tm tm = *localtime(&t);
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaU;
+    else denda = dendaUsaha;
 
     totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
 
@@ -1882,7 +1882,7 @@ void e33()
     t = time(NULL);
     struct tm tm = *localtime(&t);
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaU;
+    else denda = dendaUsaha;
 
     totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
 
@@ -1928,7 +1928,7 @@ void e34()
     t = time(NULL);
     struct tm tm = *localtime(&t);
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaU;
+    else denda = dendaUsaha;
 
     totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
 
