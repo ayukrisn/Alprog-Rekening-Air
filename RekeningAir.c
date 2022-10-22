@@ -46,8 +46,8 @@ void menu()
     printf("\t\t  ______________________________________________________________________ \n");
     printf("\t\t||______________________________________________________________________||\n");
     printf("\t\t||                                                                      ||\n");
-    printf("\t\t||                       P E M B A Y A R A N  A I R                     ||\n");
-    printf("\t\t||                   PERUMDA AIR MINUM TIRTA SEWAKADARMA                ||\n");
+    printf("\t\t||                   P R O G R A M  M E N G H I T U N G                 ||\n");
+    printf("\t\t||                       T A R I F  A I R  M I N U M                    ||\n");
     printf("\t\t||                                                                      ||\n");
     printf("\t\t|| ==================================================================== ||\n");
     printf("\t\t|| [1] Registrasi Pelanggan                                             ||\n");
