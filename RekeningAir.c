@@ -26,7 +26,7 @@ void menu(),
      e11(), e12(), e13(), e14(),
      e21(), e22(), e23(), e24(),
      e31(), e32(), e33(), e34(),
-     kredit(), keluar(), repeat(), inputSalah();
+     kredit(), keluar(), repeat(), flushIn(), inputSalah();
 
 char nama[255],
      alamat[255];
