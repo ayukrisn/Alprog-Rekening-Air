@@ -494,8 +494,10 @@ void d11()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaRT;
+    if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaRT;}
 
     totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
@@ -540,8 +542,10 @@ void d12()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaRT;
+    if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaRT;}
 
     totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
@@ -586,8 +590,10 @@ void d21()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaRT;
+    if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaRT;}
 
     totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
@@ -633,8 +639,10 @@ void d22()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaRT;
+    if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaRT;}
 
     totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
@@ -680,8 +688,10 @@ void d31()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaRT;
+    if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaRT;}
 
     totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
@@ -728,8 +738,10 @@ void d32()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaRT;
+    if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaRT;}
 
     totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
@@ -775,8 +787,10 @@ void d41()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaRT;
+    if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaRT;}
 
     totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
@@ -822,8 +836,10 @@ void d42()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaRT;
+    if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaRT;}
 
     totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
@@ -869,8 +885,10 @@ void d13()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaRT;
+    if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaRT;}
 
     totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
@@ -915,8 +933,10 @@ void d14()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaRT;
+    if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaRT;}
 
     totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
@@ -962,8 +982,10 @@ void d23()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaRT;
+    if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaRT;}
 
     totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
@@ -1009,8 +1031,10 @@ void d24()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaRT;
+    if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaRT;}
 
     totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
@@ -1055,8 +1079,10 @@ void d33()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaRT;
+    if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaRT;}
 
     totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
@@ -1102,8 +1128,10 @@ void d34()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaRT;
+    if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaRT;}
 
     totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
@@ -1149,8 +1177,10 @@ void d43()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaRT;
+    if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaRT;}
 
     totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
@@ -1196,8 +1226,10 @@ void d44()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaRT;
+    if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaRT;}
 
     totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
@@ -1243,8 +1275,10 @@ void d51()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaRT;
+    if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaRT;}
 
     totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
@@ -1289,8 +1323,10 @@ void d52()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaRT;
+    if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaRT;}
 
     totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
@@ -1336,8 +1372,10 @@ void d53()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaRT;
+    if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaRT;}
 
     totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
@@ -1383,8 +1421,10 @@ void d54()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaRT;
+    if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaRT;}
 
     totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
@@ -1429,8 +1469,10 @@ void e11()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaUsaha;
+     if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaUsaha;}
 
     totalBiaya = tarifPemakaian + BPM_U + biayaAdmin + denda;
 
@@ -1476,8 +1518,10 @@ void e12()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaUsaha;
+     if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaUsaha;}
 
     totalBiaya = tarifPemakaian + BPM_U + biayaAdmin + denda;
 
@@ -1522,8 +1566,10 @@ void e13()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaUsaha;
+     if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaUsaha;}
 
     totalBiaya = tarifPemakaian + BPM_U + biayaAdmin + denda;
 
@@ -1568,8 +1614,10 @@ void e14()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaUsaha;
+     if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaUsaha;}
 
     totalBiaya = tarifPemakaian + BPM_U + biayaAdmin + denda;
 
@@ -1613,8 +1661,10 @@ void e21()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaUsaha;
+     if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaUsaha;}
 
     totalBiaya = tarifPemakaian + BPM_U + biayaAdmin + denda;
 
@@ -1659,8 +1709,10 @@ void e22()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaUsaha;
+     if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaUsaha;}
 
     totalBiaya = tarifPemakaian + BPM_U + biayaAdmin + denda;
 
@@ -1705,8 +1757,10 @@ void e23()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaUsaha;
+     if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaUsaha;}
 
     totalBiaya = tarifPemakaian + BPM_U + biayaAdmin + denda;
 
@@ -1751,8 +1805,10 @@ void e24()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaUsaha;
+     if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaUsaha;}
 
     totalBiaya = tarifPemakaian + BPM_U + biayaAdmin + denda;
 
@@ -1797,8 +1853,10 @@ void e31()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaUsaha;
+     if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaUsaha;}
 
     totalBiaya = tarifPemakaian + BPM_U + biayaAdmin + denda;
 
@@ -1843,8 +1901,10 @@ void e32()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaUsaha;
+     if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaUsaha;}
 
     totalBiaya = tarifPemakaian + BPM_U + biayaAdmin + denda;
 
@@ -1889,8 +1949,10 @@ void e33()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaUsaha;
+     if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaUsaha;}
 
     totalBiaya = tarifPemakaian + BPM_U + biayaAdmin + denda;
 
@@ -1935,8 +1997,10 @@ void e34()
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    if ((tm.tm_mday - tempo) <= 0) denda = 0;
-    else denda = dendaUsaha;
+     if ((tm.tm_mday - tempo) <= 0) {
+         denda = 0;
+    }else{ 
+         denda = dendaUsaha;}
 
     totalBiaya = tarifPemakaian + BPM_U + biayaAdmin + denda;
 
