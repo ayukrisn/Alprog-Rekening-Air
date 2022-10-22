@@ -1,3 +1,6 @@
+// 2205551069 Ni Kadek Ari Diah Lestari 
+// 2205551072 I Gusti Ayu Krisna Kusuma Dewi 
+
 #include <stdio.h>
 #include <windows.h>
 #include <math.h>
