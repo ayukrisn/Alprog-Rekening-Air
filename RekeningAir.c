@@ -16,7 +16,7 @@
 #define tempo               21           //tempo bayar
 
 void menu(),
-     registrasi1(), regisKelompok(), regisRTSubsidi(), regisRTNonSubsidi(), regisUsaha(),
+     registrasi(), regisKelompok(), regisRTSubsidi(), regisRTNonSubsidi(), regisUsaha(),
      inputPemakaian(),
      d11(), d12(), d13(), d14(),
      d21(), d22(), d23(), d24(),
@@ -25,7 +25,8 @@ void menu(),
      d51(), d52(), d53(), d54(),
      e11(), e12(), e13(), e14(),
      e21(), e22(), e23(), e24(),
-     e31(), e32(), e33(), e34();
+     e31(), e32(), e33(), e34(),
+     kredit(), keluar(), repeat(), inputSalah(0;
 
 char nama[255],
      alamat[255];
@@ -63,7 +64,7 @@ void menu()
          {
             case 1:
                 system("cls");
-                registrasi1();
+                registrasi();
                 break;
             case 2:
                 system("cls");
@@ -84,7 +85,7 @@ void menu()
  }
 
 
-void registrasi1()
+void registrasi()
 {
     int navigasi = 0;
     printf("\t\t  ______________________________________________________________________\n");
@@ -120,14 +121,14 @@ void registrasi1()
         } else
         {
             printf("Masukkan Anda salah. Mohon coba lagi.");
-            registrasi1();
+            registrasi();
         }
 
     }
     else
     {
         inputSalah();
-        registrasi1();
+        registrasi();
     }
 
 }
