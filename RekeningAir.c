@@ -3,7 +3,6 @@
 #include <math.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#include <memory.h>
 #include <time.h>
 
 #define biayaAdmin          3000         //Biaya administrasi Rp3000
@@ -494,7 +493,7 @@ void d11()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaRT;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -512,12 +511,12 @@ void d11()
     printf("\t\t     Golongan           : D1-1 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_R);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
@@ -540,7 +539,7 @@ void d12()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaRT;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -558,12 +557,12 @@ void d12()
     printf("\t\t     Golongan           : D1-2 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_R);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
@@ -586,7 +585,7 @@ void d21()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaRT;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -604,16 +603,17 @@ void d21()
     printf("\t\t     Golongan           : D2-1 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_R);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
 }
+
 
 
 void d22()
@@ -632,7 +632,7 @@ void d22()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaRT;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -650,16 +650,17 @@ void d22()
     printf("\t\t     Golongan           : D2-2 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_R);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
 }
+
 
 
 void d31()
@@ -678,7 +679,7 @@ void d31()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaRT;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -696,16 +697,17 @@ void d31()
     printf("\t\t     Golongan           : D3-1 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_R);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
 }
+
 
 
 
@@ -725,7 +727,7 @@ void d32()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaRT;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -743,16 +745,17 @@ void d32()
     printf("\t\t     Golongan           : D3-2 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_R);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
 }
+
 
 
 void d41()
@@ -771,7 +774,7 @@ void d41()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaRT;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -789,16 +792,17 @@ void d41()
     printf("\t\t     Golongan           : D4-1 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_R);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
 }
+
 
 
 void d42()
@@ -817,7 +821,7 @@ void d42()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaRT;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -835,16 +839,17 @@ void d42()
     printf("\t\t     Golongan           : D4-2 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_R);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
 }
+
 
 
 void d13()
@@ -863,7 +868,7 @@ void d13()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaRT;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -881,12 +886,12 @@ void d13()
     printf("\t\t     Golongan           : D1-3 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_R);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
@@ -909,7 +914,7 @@ void d14()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaRT;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -927,16 +932,17 @@ void d14()
     printf("\t\t     Golongan           : D1-4 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_R);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
 }
+
 
 
 void d23()
@@ -955,7 +961,7 @@ void d23()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaRT;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -973,16 +979,17 @@ void d23()
     printf("\t\t     Golongan           : D2-3 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_R);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
 }
+
 
 
 void d24()
@@ -1001,7 +1008,7 @@ void d24()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaRT;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -1019,12 +1026,12 @@ void d24()
     printf("\t\t     Golongan           : D2-4 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_R);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
@@ -1047,7 +1054,7 @@ void d33()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaRT;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -1065,16 +1072,17 @@ void d33()
     printf("\t\t     Golongan           : D3-3 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_R);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
 }
+
 
 
 void d34()
@@ -1093,7 +1101,7 @@ void d34()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaRT;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -1111,16 +1119,17 @@ void d34()
     printf("\t\t     Golongan           : D3-4 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_R);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
 }
+
 
 
 void d43()
@@ -1139,7 +1148,7 @@ void d43()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaRT;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -1157,16 +1166,17 @@ void d43()
     printf("\t\t     Golongan           : D4-3 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_R);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
 }
+
 
 
 void d44()
@@ -1185,7 +1195,7 @@ void d44()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaRT;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -1203,16 +1213,17 @@ void d44()
     printf("\t\t     Golongan           : D4-4 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_R);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
 }
+
 
 
 void d51()
@@ -1231,7 +1242,7 @@ void d51()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaRT;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -1249,12 +1260,12 @@ void d51()
     printf("\t\t     Golongan           : D5-1 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_R);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
@@ -1277,7 +1288,7 @@ void d52()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaRT;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -1295,16 +1306,17 @@ void d52()
     printf("\t\t     Golongan           : D5-2 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_R);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
 }
+
 
 
 void d53()
@@ -1323,7 +1335,7 @@ void d53()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaRT;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -1341,16 +1353,17 @@ void d53()
     printf("\t\t     Golongan           : D5-3 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_R);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
 }
+
 
 
 void d54()
@@ -1369,7 +1382,7 @@ void d54()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaRT;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_R + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -1387,12 +1400,12 @@ void d54()
     printf("\t\t     Golongan           : D5-4 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_R);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
@@ -1415,7 +1428,7 @@ void e11()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaUsaha;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_U + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -1433,16 +1446,17 @@ void e11()
     printf("\t\t     Golongan           : E1-1 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_U);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
 }
+
 
 
 void e12()
@@ -1461,7 +1475,7 @@ void e12()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaUsaha;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_U + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -1479,12 +1493,12 @@ void e12()
     printf("\t\t     Golongan           : E1-2 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_U);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
@@ -1507,7 +1521,7 @@ void e13()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaUsaha;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_U + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -1525,12 +1539,12 @@ void e13()
     printf("\t\t     Golongan           : E1-3 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_U);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
@@ -1553,7 +1567,7 @@ void e14()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaUsaha;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_U + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -1571,17 +1585,16 @@ void e14()
     printf("\t\t     Golongan           : E1-4 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_U);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
 }
-
 
 void e21()
 {
@@ -1599,7 +1612,7 @@ void e21()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaUsaha;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_U + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -1617,12 +1630,12 @@ void e21()
     printf("\t\t     Golongan           : E2-1 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_U);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
@@ -1645,7 +1658,7 @@ void e22()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaUsaha;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_U + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -1663,12 +1676,12 @@ void e22()
     printf("\t\t     Golongan           : E2-2 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_U);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
@@ -1691,7 +1704,7 @@ void e23()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaUsaha;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_U + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -1709,12 +1722,12 @@ void e23()
     printf("\t\t     Golongan           : E2-3 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_U);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
@@ -1737,7 +1750,7 @@ void e24()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaUsaha;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_U + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -1755,12 +1768,12 @@ void e24()
     printf("\t\t     Golongan           : E2-4 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_U);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
@@ -1783,7 +1796,7 @@ void e31()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaUsaha;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_U + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -1801,12 +1814,12 @@ void e31()
     printf("\t\t     Golongan           : E3-1 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_U);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
@@ -1829,7 +1842,7 @@ void e32()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaUsaha;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_U + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -1847,12 +1860,12 @@ void e32()
     printf("\t\t     Golongan           : E3-2 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_U);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
@@ -1875,7 +1888,7 @@ void e33()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaUsaha;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_U + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -1893,12 +1906,12 @@ void e33()
     printf("\t\t     Golongan           : E3-3 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_U);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
@@ -1921,7 +1934,7 @@ void e34()
     if ((tm.tm_mday - tempo) <= 0) denda = 0;
     else denda = dendaUsaha;
 
-    totalBiaya = totalPemakaian + BPM_R + biayaAdmin + denda;
+    totalBiaya = tarifPemakaian + BPM_U + biayaAdmin + denda;
 
     printf("\t\t    __________________________________________________________________    \n");
     printf("\t\t||======================================================================||\n");
@@ -1939,12 +1952,12 @@ void e34()
     printf("\t\t     Golongan           : E3-4 \n");
     printf("\t\t     Tanggal            : %d-%d-%d\n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900);
     printf("\t\t     Jatuh Tempo        : %d-%d-%d\n", tempo, tm.tm_mon+1, tm.tm_year+1900);
-    printf("\t\t     Tarif Pemakaian    : %d \n", tarifPemakaian);
-    printf("\t\t     Biaya Administrasi : %d \n", biayaAdmin);
-    printf("\t\t     Biaya Pemeliharaan : %d \n", BPM_R);
-    printf("\t\t     Denda              : %d \n", denda);
+    printf("\t\t     Tarif Pemakaian    : Rp%d \n", tarifPemakaian);
+    printf("\t\t     Biaya Administrasi : Rp%d \n", biayaAdmin);
+    printf("\t\t     Biaya Pemeliharaan : Rp%d \n", BPM_U);
+    printf("\t\t     Denda              : Rp%d \n", denda);
     printf("\t\t   --------------------------------------------------------------------   \n");
-    printf("\t\t     Total Pemakaian    : %d \n", tarifPemakaian);
+    printf("\t\t     Total Pembayaran   : Rp%d \n", totalBiaya);
     printf("\t\t||______________________________________________________________________||\n");
     repeat();
 
