@@ -9,8 +9,8 @@
 #include <time.h>
 
 #define biayaAdmin          3000         //Biaya administrasi Rp3000
-#define dendaRT             8000         //Denda pemakaian 10 sampai 100 m3 Rp8000
-#define dendaUsaha          10000        //Denda pemakaian melebihi 100 m3 Rp10000
+#define dendaRT             8000         //Denda pemakaian melebihi tempo pembayaran
+#define dendaUsaha          10000        //Denda pemakaian melebihi tempo pembayaran
 #define BPM_R               5000         //biaya pemeliharaan meter rumah tangga Rp.5000
 #define BPM_U               5000         //biaya pemeliharaan meter usaha Rp.5000
 #define tempo               21           //tempo bayar
